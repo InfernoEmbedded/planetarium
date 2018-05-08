@@ -6,7 +6,8 @@ include <starmap.scad>;
  * Gnu Public License 3.0  https://www.gnu.org/licenses/gpl-3.0.en.html
  */
 
-rodLength = 100;
+rodRadius = 100;
+rodInnerRadius = 95;
 baseRodRadius = 2;
 minimumRodRadius = 0.5; // Minimum radius for magnitude 6.5 stars
 starFirst = 0;
@@ -30,7 +31,8 @@ module starRod(ra, dec, mag) {
 
     rotate(a = [0, 0, theta])
     rotate(a = [phi, 0, 0])
-    cylinder(h=rodLength, r=radius, center=false);
+    translate([0,0,rodInnerRadius])
+    cylinder(h=rodRadius - rodInnerRadius, r=radius, center=false);
 }
 
 /**
