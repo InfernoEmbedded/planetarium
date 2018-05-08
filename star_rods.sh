@@ -7,7 +7,7 @@ increment=`expr $stars / $count + 1`
 
 start=0
 for i in `seq 1 $count`; do
-#	openscad-nightly -o star_rods.$i.stl -D "starFirst=$start" -D "starCount=$increment" star_rods.scad &
+	openscad-nightly -o star_rods.$i.stl -D "starFirst=$start" -D "starCount=$increment" star_rods.scad &
 	start=`expr $start + $increment`
 done
 
