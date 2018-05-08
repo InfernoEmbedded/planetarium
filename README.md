@@ -9,9 +9,8 @@ Star_rods.sh generates the star rods for later subtraction. It breaks the work i
 instance for each chunk. This takes about 15 minutes on a Threadripper 1950x. The script then concatenates the result into a single
 ASCII STL file.
 
-Star_sphere.sh creates a spherical shell, and subtracts the rods from it. This runs as a single thread, takes about x hours, and
-requires xxGB of RAM.
-
+Star_sphere.sh creates a spherical shell, and subtracts the rods from it. This runs as a single thread, and took about 2 hours.
+You maf need to build the latest LibCSG from source in order to complete in a reasonable amount of time.
 
 ## Prerequisites
  - OpenSCAD Nightly  (Generates the STLs. Nightly possibly isn't necessary, but in what in hardcoded in the scripts, you could use the GUI instead)
